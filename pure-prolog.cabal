@@ -1,40 +1,15 @@
 cabal-version:      >= 1.8
 name:               pure-prolog
-version:            0.1.0.0
+version:            0.3.0.0
 build-type: Simple
-
--- A short (one-line) description of the package.
--- synopsis:
-
--- A longer description of the package.
--- description:
-
--- A URL where users can report bugs.
--- bug-reports:
-
--- The license under which the package is released.
-license:            MIT
-author:             Ken Friis Larsen
-
--- A copyright notice.
--- copyright:
--- category:
-extra-source-files:
-    CHANGELOG.md
-    README.md
 
 library
     -- Modules included in this executable, other than Main.
-    other-modules: Analysis, Ast, Interp, Parser
-
-    -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
+    exposed-modules: Analysis, Ast, Interp, Parser
     build-depends:    base, parsec, pretty, containers
     hs-source-dirs:   src
-    default-language: Haskell2010
 
 executable pure-prolog
     main-is:          Main.hs
     build-depends:    base, parsec, pretty, containers, cmdargs, pure-prolog
     hs-source-dirs:   src
-    default-language: Haskell2010
